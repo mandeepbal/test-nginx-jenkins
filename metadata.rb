@@ -1,0 +1,10 @@
+name             'test-nginx-jenkins'
+maintainer       'Mandeep Bal'
+maintainer_email 'bal_mandeep@bah.com'
+license          'All rights reserved'
+description      'Installs/Configures test-nginx-jenkins'
+long_description 'Installs/Configures test-nginx-jenkins'
+version          '0.1.0'
+
+depends 'jenkins', '~> 2.4.0'
+depends 'nginx-repo'

@@ -1,0 +1,23 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-14.04
+    driver_config:
+      network:
+        - ['private_network', {ip: '192.168.33.11'}]
+  - name: centos-7.1
+    driver_config:
+      network:
+        - ['private_network', {ip: '192.168.33.33'}]
+
+suites:
+  - name: server
+    run_list:
+          - recipe[test-nginx-jenkins::default]
+    attributes:
+ 
